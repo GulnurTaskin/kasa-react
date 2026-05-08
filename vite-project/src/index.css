@@ -14,12 +14,8 @@ body {
 }
 
 a {
-  color: inherit;
   text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
+  color: inherit;
 }
 
 img {
@@ -170,7 +166,7 @@ img {
   background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0));
 }
 
-/* Başlık resmin üstünde */
+
 .card h3 {
   position: absolute;
   left: 20px;
@@ -420,6 +416,38 @@ img {
 
 .star-filled {
   color: #ff6060;
+}
+.error {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  text-align: center;
+  color: #ff6060;
+}
+
+.error h1 {
+  margin: 0;
+  font-size: 180px;
+  font-weight: 700;
+}
+
+.error p {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.error-link {
+  color: black;
+  text-decoration: underline;
+  font-size: 16px;
+}
+
+.error-link:hover {
+  color: black;
 }
 
 /* =========================

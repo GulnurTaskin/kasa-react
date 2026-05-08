@@ -1,18 +1,79 @@
-# React + Vite
+# Kasa
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projet React réalisé avec Vite dans le cadre de la formation OpenClassrooms.
 
-Currently, two official plugins are available:
+L'application permet d'afficher une liste de logements et d'accéder à la page détail de chaque logement.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies utilisées
 
-## React Compiler
+* React
+* React Router
+* Vite
+* CSS
+* Fetch API
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## Installation du projet
 
-Note: This will impact Vite dev & build performances.
+Cloner le projet puis aller dans le dossier front-end :
 
-## Expanding the ESLint configuration
+```bash
+cd vite-project
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Installer les dépendances :
+
+```bash
+npm install
+```
+
+Lancer le front-end :
+
+```bash
+npm run dev
+```
+
+Le projet sera accessible sur :
+
+```bash
+http://localhost:5173
+```
+
+## Lancement du back-end
+
+Depuis la racine du projet :
+
+```bash
+docker-compose up -d
+```
+
+Pour arrêter les conteneurs :
+
+```bash
+docker-compose down
+```
+
+Ou lancer le back-end manuellement :
+
+```bash
+cd backend
+npm install
+npm start
+```
+
+## Fonctionnalités principales
+
+* Navigation avec React Router
+* Page d'accueil avec les logements
+* Page détail d'un logement
+* Page d'erreur 404
+* Slideshow des images
+* Collapse réutilisable
+* Appels API avec fetch
+
+## Structure du projet
+
+* `pages/` : pages principales de l'application
+* `components/` : composants réutilisables
+* `assets/` : images et logos
+* `router.jsx` : configuration des routes
+* `index.css` : styles globaux

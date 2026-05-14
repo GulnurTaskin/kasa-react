@@ -454,20 +454,154 @@ img {
    5) RESPONSIVE
    (mobile/tablet)
    ========================= */
+
 @media (max-width: 768px) {
   .main {
-    padding: 16px;
+    padding: 0 20px;
   }
 
-  .header {
-    padding: 16px;
+  .header-inner {
+    height: 70px;
+  }
+
+  .logo {
+    height: 45px;
+  }
+
+  .nav {
+    gap: 20px;
+  }
+
+  .nav-link {
+    font-size: 14px;
+    text-transform: uppercase;
   }
 
   .banner {
-    height: 160px;
+    height: 111px;
+    border-radius: 10px;
+    margin: 20px 0;
+    justify-content: flex-start;
   }
 
   .banner-title {
-    font-size: 22px;
+    font-size: 24px;
+    text-align: left;
+    padding-left: 16px;
+    max-width: 260px;
+  }
+
+  .cards {
+    background: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .card {
+    height: 255px;
+  }
+
+  .slideshow {
+    height: 255px;
+    border-radius: 10px;
+  }
+
+  .slideshow-arrow {
+    width: 24px;
+    height: 24px;
+  }
+
+  .slideshow-arrow-left {
+    left: 8px;
+  }
+
+  .slideshow-arrow-right {
+    right: 8px;
+  }
+
+  .slideshow-counter {
+    display: none;
+  }
+
+  .logement-top {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .logement-right {
+    width: 100%;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logement-info h1 {
+    font-size: 18px;
+  }
+
+  .logement-info p {
+    font-size: 14px;
+  }
+
+  .tag {
+    font-size: 10px;
+    border-radius: 5px;
+    padding: 4px 12px;
+  }
+
+  .host-picture {
+    width: 32px;
+    height: 32px;
+  }
+
+  .host-name {
+    font-size: 12px;
+  }
+
+  .star {
+    font-size: 16px;
+  }
+
+  .logement-collapses {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .logement-collapses .collapse {
+    width: 100%;
+  }
+
+  .about-collapses {
+    width: 100%;
+    max-width: 100%;
+    gap: 20px;
+  }
+
+  .collapse-header {
+    height: 30px;
+    padding: 0 12px;
+  }
+
+  .collapse-header h3 {
+    font-size: 13px;
+  }
+
+  .collapse-content {
+    font-size: 12px;
+    padding: 14px;
+  }
+
+  .error h1 {
+    font-size: 96px;
+  }
+
+  .error p {
+    font-size: 18px;
+  }
+
+  .footer {
+    margin-top: 30px;
   }
 }

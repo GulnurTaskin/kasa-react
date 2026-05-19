@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Collapse from "../components/collapse";
+import Collapse from "../components/Collapse";
 import Banner from "../components/Banner";
 import bannerAbout from "../assets/banner-about.jpg";
 

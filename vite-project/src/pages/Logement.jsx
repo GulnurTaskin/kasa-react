@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import Slideshow from "../components/Slideshow";
-import Collapse from "../components/collapse";
+import Collapse from "../components/Collapse";
 
 export default function Logement() {
   const { id } = useParams();

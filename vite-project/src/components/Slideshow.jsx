@@ -32,7 +32,7 @@ export default function Slideshow({ pictures }) {
       <img className="slideshow-image" src={pictures[index]} alt="Logement" width="600" />
 
       {showControls && (
-         <div className="slideshow-controls">
+        <div className="slideshow-controls">
           <button className="slideshow-arrow slideshow-arrow-left" onClick={goPrev}>Précédent</button>
           <button className="slideshow-arrow slideshow-arrow-right" onClick={goNext}>Suivant</button>
           <p className="slideshow-counter" >

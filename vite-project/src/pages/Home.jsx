@@ -11,25 +11,25 @@ export default function Home() {
       .then((response) => response.json())
       .then((data) => setProperties(data))
       .catch((error) => console.error("Erreur API :", error));
-  }, []);
+  }, []);  // properties = [logement1, logement2, logement3..]
 
   return (
-     <div className="home">
+    <div className="home">
       <Banner
-  title="Chez vous, partout et ailleurs"
-  image={bannerHome}
-/>
+        title="Chez vous, partout et ailleurs"
+        image={bannerHome}
+      />
 
       <div className="cards">
-      {properties.map((p) => (
-        <Card
-          key={p.id}
-          id={p.id}
-          title={p.title}
-          cover={p.cover}
-        />
-      ))}
-    </div>
+        {properties.map((p) => (
+          <Card
+            key={p.id}
+            id={p.id}
+            title={p.title}
+            cover={p.cover}
+          />
+        ))}
+      </div>
     </div>
   );
 }

@@ -47,7 +47,7 @@ describe("Slideshow component", () => {
     expect(screen.queryByText("Précédent")).not.toBeInTheDocument();
   });
 
-  test("affiche un message si aucune image n'est fournie", () => {
+  test("affiche un message si aucune image n'est fournie", () => { 
   render(<Slideshow pictures={[]} />);
 
   expect(screen.getByText("Aucune image.")).toBeInTheDocument();

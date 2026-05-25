@@ -7,15 +7,14 @@ import Logement from "./pages/Logement";
 
 export const router = createBrowserRouter([
   {
-     path: "/",
+    path: "/",
     element: <Layout />,
     children: [
       { index: true, element: <Home /> },
       { path: "about", element: <About /> },
       { path: "logement/:id", element: <Logement /> },
-      { path: "error", element: <Error /> },
       { path: "*", element: <Error /> },
     ],
   },
-    
+
 ]);

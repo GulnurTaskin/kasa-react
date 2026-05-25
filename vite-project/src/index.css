@@ -8,7 +8,7 @@
 
 body {
   margin: 0;
-  font-family: system-ui, Arial, sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: #000;
   background: #fff;
 }
@@ -41,7 +41,7 @@ img {
 .container {
   max-width: 1240px;
   margin: 0 auto;
-  padding: 0 20px; 
+  padding: 0 20px;
 }
 
 /* page width container */
@@ -111,6 +111,7 @@ img {
   background-position: center;
   margin: 40px 0;
   color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .banner::before {
@@ -163,29 +164,28 @@ img {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0));
+  background: linear-gradient(to top,
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0));
+       pointer-events: none;
 }
 
 
 .card h3 {
   position: absolute;
   left: 20px;
-  right: 20px;
   bottom: 20px;
+
   margin: 0;
 
-  color: #fff;
+  font-family: "Montserrat", sans-serif;
   font-size: 18px;
   font-weight: 700;
+  line-height: 143%;
+
+  color: white;
 
   z-index: 1;
-}
-.card::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0));
-  pointer-events: none;
 }
 
 /* Slideshow */
@@ -292,11 +292,44 @@ img {
 }
 
 .collapse-icon {
-  font-size: 20px;
+  position: relative;
+  width: 24px;
+  height: 14px;
+  display: inline-block;
+
+  color: transparent;
   transition: transform 0.3s ease;
 }
 
-/* rotation si ouvert */
+.collapse-icon::before,
+.collapse-icon::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+
+  width: 16px;
+  height: 4px;
+
+  background-color: white;
+  border-radius: 4px;
+}
+
+.collapse-icon::before {
+  left: 0;
+  transform: rotate(-45deg);
+}
+
+.collapse-icon::after {
+  right: 0;
+  transform: rotate(45deg);
+}
+
+/* fermé */
+.collapse-icon {
+  transform: rotate(0deg);
+}
+
+/* ouvert */
 .collapse-icon.open {
   transform: rotate(180deg);
 }
@@ -379,7 +412,7 @@ img {
 
 .logement-collapses .collapse {
   width: 582px;
-} 
+}
 
 .about-collapses {
   width: 1023px;
@@ -387,7 +420,7 @@ img {
   display: flex;
   flex-direction: column;
   gap: 30px;
-} 
+}
 
 .host-name {
   margin: 0;
@@ -417,6 +450,7 @@ img {
 .star-filled {
   color: #ff6060;
 }
+
 .error {
   min-height: 70vh;
   display: flex;
@@ -591,6 +625,24 @@ img {
   .collapse-content {
     font-size: 12px;
     padding: 14px;
+    overflow: hidden;
+    animation: collapseOpen 0.45s ease;
+  }
+
+  @keyframes collapseOpen {
+    from {
+      opacity: 0;
+      max-height: 0;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    to {
+      opacity: 1;
+      max-height: 500px;
+      padding-top: 14px;
+      padding-bottom: 14px;
+    }
   }
 
   .error h1 {

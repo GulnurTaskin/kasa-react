@@ -73,30 +73,30 @@ export default function Logement() {
       </div>
 
       <div className="logement-collapses">
-  <Collapse
-    title="Description"
-    isOpen={openCollapse === "description"}
-    onToggle={() =>
-      setOpenCollapse(openCollapse === "description" ? null : "description")
-    }
-  >
-    <p>{logement.description}</p>
-  </Collapse>
+        <Collapse
+          title="Description"
+          isOpen={openCollapse === "description"}
+          onToggle={() =>
+            setOpenCollapse(openCollapse === "description" ? null : "description")
+          }
+        >
+          <p>{logement.description}</p>
+        </Collapse>
 
-  <Collapse
-    title="Équipements"
-    isOpen={openCollapse === "equipements"}
-    onToggle={() =>
-      setOpenCollapse(openCollapse === "equipements" ? null : "equipements")
-    }
-  >
-    <ul>
-      {logement.equipments.map((item, index) => (
-        <li key={index}>{item}</li>
-      ))}
-    </ul>
-  </Collapse>
-</div>
+        <Collapse
+          title="Équipements"
+          isOpen={openCollapse === "equipements"}
+          onToggle={() =>
+            setOpenCollapse(openCollapse === "equipements" ? null : "equipements")
+          }
+        >
+          <ul>
+            {logement.equipments.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
+        </Collapse>
+      </div>
     </div>
   );
 }

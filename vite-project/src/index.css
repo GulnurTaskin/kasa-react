@@ -127,6 +127,9 @@ img {
   font-weight: 700;
   text-align: center;
 }
+.banner-about {
+  box-shadow: none;
+}
 
 /* Cards (Home) */
 .cards {
@@ -287,8 +290,10 @@ img {
 
 .collapse-header h3 {
   margin: 0;
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 24px;
+  font-weight: 700;
+   font-family: "Montserrat", sans-serif;
+  line-height: 143%;
 }
 
 .collapse-icon {

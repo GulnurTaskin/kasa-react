@@ -328,6 +328,9 @@ img {
   right: 0;
   transform: rotate(45deg);
 }
+.collapse-content {
+  animation: collapseOpen 0.4s ease;
+}
 
 /* fermé */
 .collapse-icon {
